@@ -1,0 +1,106 @@
+man est une commande externe 
+type est une comme interne 
+whereis est une commande externe
+cat est une commande externe 
+pwd est une commande interne
+cd est une commande interne 
+kill est une commande interne 
+echo est une commande interne et externe 
+
+type permet d'afficher le type de la commande c'est a dire s'il elle est interne ou externe. 
+
+Whereis permet d'afficher l'emplacement dans lequel nous pouvons trouve la commande 
+
+date affiche la date sous forme jour de la semaine, jour mois année heure minute seconde 
+
+date +"%d/%m/%y" permet d'afficher la date sous format jour mois annee
+
+date +"%d/%B/%y" permet d'afficher la date sous format jour mois annee avec le mois ecrit en entier Janvier 
+
+find est une commande qui permet de trouve un fichier ou un dossier en, tapant les dossiers dans lequel se trouve le fichier. Il affiche ensuite le chemin qui permet de nous mener a celui-ci
+
+Commande importante pour ls 
+
+ls permet d'afficher les dossiers ou les fichiers auquel nous pouvons accéder directement 
+
+ls -A permet d'afficher l'entierete des fichier meme les cachés 
+
+ls -l permet d'afficher les auteurs des fichiers ainsi que leur date de creation
+
+commande importante pour cd
+
+Cd permet de se déplacer dans des dossiers afin d'accéder a d'autre fichier ou a d'autre dossier 
+
+Commande importante pour Mkdir 
+
+mkdir permet de créer un dossier dans le dossiers dans lequel nous nous trouvons en precisant le nom apres Mkdir dans la commande.
+
+Mkdir -p permet de creer des dossiers dans des dossiers Mkdir -p Nom/Sousdossier/sousousdossier...
+
+Commande importante pour rmdir 
+
+rmdir permet de supprimer un dossier dans le dossiers dans lequel nous nous trouvons en precisant le nom apres rmdir dans la commande.
+
+rmdir -p permet de supprimer des dossiers dans des dossiers rmdir -p Nom/Sousdossier/sousousdossier... (les dossiers doivent etre vide !)
+
+Commande importante pour mv 
+
+Mv permet de déplacer les fichier en spécifiant en premier le fichier que nous voulons déplacer puis le dossier dans lequel nous voulons le déplacer. La commande permet également de renommer le fichier 
+
+Mv -v permet de montrer les changements que nous avons effectué
+
+
+Commande importante pour cp 
+
+cp permet de copie un fichier ou un dossier d'un emplacement vers un autre. En commencant par tape la source puis l'endroit ou nous voulons le copie.
+
+cp -p permet de copié l'entierete d'un dossier dans le cas ou dans ce dossier il existe des fichiers
+
+Commande importante pour rm 
+
+rm permet de supprime un fichier ou un dossier en precisant le nom
+
+rm -r permet de supprime un dossier entier meme si a l'interieur il existe des gozzog@K129-18:~$ mv TD1 archi1/
+fichier ou d'autre dossier 
+
+Nautilus permet d'ouvrir le navigateur de fichiers mais en tapant par exemple firefox celui-ci permet d'ouvrir une page mozilla firefox 
+
+pour copie le contenu d'un dossier on utilise cp -r lenomdudossier/* destination 
+
+pour effacer un repertoire non vide on utilise rm -r
+
+Ils sont tous présent sauf gpasswd
+
+la liste des fichiers caches est :
+.java 
+ .cache
+.android 
+.config
+.ssh
+.mozilla
+ .bash_history   
+ .bash_logout 
+ .bashrc
+  .emacs.d 
+  .gnupg 
+  .profile
+  
+  
+ls -l permet d'afficher par odre d'ancienneté 
+
+cat permet d'afficher l'interieur d'un fichier 
+
+cat sans nom affiche rien 
+
+le systeme installé est linux 
+
+la distribution installe est ubuntu 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,241 @@
+						TD 2 
+				Réseaux et systèmes
+
+
+Ctrl+alt+t permet d’ouvrir le terminal
+
+Et  3) Tab permet de montrer les commandes disponible et permet également si une seule possibilité de commande est disponible de l’écrire automatiquement.   
+
+4) CTRL+a permet de revenir aux 1er caractère de la commande et CTRL+e aux dernier                                caractère.
+
+5) sleep est une commande qui suspend l'exécution d'un job pour une durée donnée. La commande sleep est toujours disponible sur un système Linux, car elle est souvent utilisée dans les scripts shell.
+
+6)CTRL+c permet de couper (c pour cut) l’exécution du code pour une commande trop longue ou lorsque la commande est bloque dans une boucle While.
+
+7)La flèche vers le haut permet de remonter l’historique des commandes tapé précédemment afin de les réutilisé ou de les modifié sans les retapé
+
+8)CTRL+u permet d’efface un a un l’historique des commandes tapé
+
+9)Lorsque nous tapé !sl le terminal affiche « bash: !sl: event not found »
+
+10)
+
+11)CTRL+l permet de remonté toute la page afin d’avoir une page vierge, il n’efface pas l’historique nous pouvons toujours remonté avec la molette.
+
+12)la commande clear permet d’efface tout l’historique des commandes exécuté, nous pouvons donc plus remonté avec la molette pour voir les commande exécuté precedement mais il est toujours possible de remonté avec la flèche du haut afin de voir les commandes tapé.
+
+13)CTRL+d permet de fermer le terminal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14 ) 15) 21)
+Le répertoire courant se trouve dans le fichier home situé dans l’arborescence ci dessous. Dans ce fichier home il y a tout les groupes avec l’ensemble des utilisateurs dans les groupes qui leurs correspond. Chaque utilisateur  a accés seulement a son dossier. Par exemple je n’ai accès seulement qu’a gozzog comme do
+-/
+	-bin
+	-dev
+		-tty*
+		-nvme*
+		-i2c-?
+		-console
+		-full
+		-hidraw?
+		-autofs
+		-block
+		…
+	-lib
+	-libx32
+	-mnt
+	-root
+	-snap
+	-sys
+	-var
+	-boot
+	-etc
+	-liv32
+	-lost+found
+	-opt
+	-run
+	-srv
+	-tmp
+	-cdrom
+	-home
+		-ann1
+			-gozzog
+			…
+		-ann2
+		-as
+		-licence
+		-vb
+	-lib64
+	-media
+	-proc
+	-sbin
+	-swapfile
+	-usr
+		-bin
+		-include
+		-lib32
+		-libexec
+		-local
+		-share
+		-games
+		-lib
+		-lib64
+		-libx32
+		-sbin
+		-src
+		
+20)
+pour les fichiers se terminant par td nous utilisons la commande ls *td
+pour les fichiers contenant td nous utilisons la commande ls *td*
+pour les fichiers se terminant par td ou cd nous utilisons la commande ls *td *cd
+pour les fichiers commençant soit par a b ou c et se terminant par un chiffre nous utilisons la commande ls a,b,c (entre crochet) * 0-9 (entre crochet)
+22)Pour trouver l’emplacement d’un fichier ou d’un dossier on utilise la commande locale qui liste les chemins permettant d’accéder a l’ensemble des dossiers ou fichiers contenant votre recherche.
+
+Stdio.h se trouve donc dans /usr/include/stdio.h
+
+23)
+Wc string.h dans le dossier include permet de trouver le nombre de ligne, de mots et de caractère que comporte ce fichier.
+Il est donc de 541 lignes
+2723 mots 
+Et 19459 caractères.
+
+24)
+Df permet de montre l’espace disque disponible encore sur la machine.
+
+Les lignes affichés sont : 
+Tmpfs 1607284 espace disponible 1607284
+/dev/nvme0n1p4 espace disponible 73131636
+
+25) 
+Le fichier etc/passwd content toutes les informations relatives aux utilisateurs (login, mots de passe, …). Il ne doit pas pouvoir être modifié a part par le root (super-utilisateur) c’est pour cela que l’on a pas accés a la fonction w (writter) pour ce fichier pour ne pas le modifié.
+
+26)
+La différence entre passwd et man 5 passwd est que man 5 passwd permet de se mettre sur la 5 e page du manuel 
+
+27) 
+La fichier etc/shadow est bloque, nous n’y avons pas accés même r(read) car ce fichier contient les mots de passe en hash
+
+28) 
+Man /etc/shadow est inaccessible les droits ne sont pas donné. 
+
+29)ils y sont pas car nous sommes dans un serveur et les données ne sont pas dedans 
+
+30) le répertoire de connexion de l’utilisateur root est /root
+      Le shell est /bin/bash
+
+31)aucun utilisateur ne fait partis du même groupe que l’administrateur ici root    
+ 
+32) le seul accés qu’on a est r (read) il nous est donc impossible de supprime ou modifié le fichier mais il est possible de le copié car nous avons les droits de lire et donc de copie. 
+
+33) avec la commande id nous pouvons voir que mon uid est 6992 ,le gid est 1002 pour le groupe ann1 et de 1015 pour le groupe étudiant.
+
+
+
+
+
+34)
+Pour créer le fichier on utilise la commande touch exemple.txt
+Ensuite nous regardons les droits mis dessus pour l’ensemble des utilisateurs avec la commande ls-l exemple.txt 
+Les droits sont situe de façon suivant rw r  r  .
+Nous devons donc enlever le droit w pour moi même on effectue donc la commande suivante 
+Chmod exemple.txt -200 le -200 correspond a enlevé pour le users le droit de write c’est a dire modifie ou écrire.
+
+35)
+Pour créer un répertoire nomme prive nous faisons la commande mkdir prive 
+Nous regarde ensuite les droits en faisant ls -l nous pouvons remarque que les droits sont repartis de façons suivante rwxr xr x.
+Nous devons donc enlever les droits r x et r x pour les groupes et other nous effectuons donc la commande suivante.
+Chmod prive -55
+
+37)
+Mkdir divers
+Ls -l, les droits sont rwxr x r x, on doit donc enlever les x pour les groupes et les autres on effectue donc la commande suivante chmod divers -11.
+
+38) 
+Les droits sur le fichier passwd est rwsr_x_ _ _ .
+ La permission SUID correspond a set user Id et correspond a un moyen de transfert des droits d’utilisateurs on peut le voir avec le s dans rws.
+Elle est exécute avec la commande chmod.
+
+39) ls -l | grep « .rwsr* »
+chfn
+chsh
+fusermount3
+gpasswd
+mount
+Umount
+Sudo
+Su
+passwd
+pkexec
+newgrp
+
+40)
+Pour créer le fichier salade.txt il faut effectué la commande touch salade.txt dans le dossier divers.
+Pour enregistré un texte simple dans le fichier nous effectuons la commande nano suivi du nom du fichier. Nous pouvons ensuite écrire ce que l’on souhaite. Pour quittez et enregistré ce que l’on a écris nous effectuons un ctrl s suivi d’un ctrl x.
+
+41)
+Pour créer un lien dur entre le fichier salade.txt et le fichier recette.txt on utilise la commande ln suivi du fichier salade et ensuite le fichier recette
+
+42)
+Le numero d’inode pour les 2 est :
+22943101 
+On remarque que le lien physique donne le même numéro d’Inode aux 2 fichiers. Le fichier recette.txt a pris le numéro d’inode de salade.txt
+
+
+
+43)
+En supprimant recette.txt avec la commande rm. On se rend compte que le fichier salade.txt est toujours présent.
+
+44)
+Pour créer un lien symbolique ln -s /divers/salade.txt astuce.txt
+
+
+45)
+Pour liste les 2 fichiers on utilise -l après ls suivi du fichier 
+On remarque alors que astuce est relie par une flèche a salade.txt et que les droits d’accès de astuce.txt sont 777 c’est a dire que tout le monde a les droits dessus.
+Mais leur numéro d’inode est maigres tout different. 
+
+46)
+En supprimant salade.txt astuce.txt est toujours la mais il est écris en rouge et surlonge en noir
+
+48)
+Nous n’avons pas les droits d’accès pour effectué la dernière commande car nous n’avons pas l’accès de tmp. Et en effectuant les 2 premières commande l’affichage est le même. 
+
+49)
+Find stdio.h 2> erreur.err
+
+50) il n’existe pas de fichier ou tout le monde a les droits 
+On peut le vérifié grâce a la commande 
+
+ls -l | grep « .rwxrwxrwx »
+
+51) aucun fichier est lié au shell 
+
+55) 
+CTRL+A puis CTRL+K puis CTRL+U
+
+57) alt g demande le numero de ligne et colonne pour y allez
+58) 
+Alt+w permet de navigue parmi les résultats de la recherche (CTRL+w)
+
+59)
+Alt+r permet de remplace des caractères par d’autres
