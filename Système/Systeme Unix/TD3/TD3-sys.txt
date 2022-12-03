@@ -1,0 +1,191 @@
+alias h='history'
+lorsque nous tapons h maintenant l'entiereté des commandes tapé précédemment s'affiche.
+   alias li='ls -i'
+lorsque nous tapons li maintenant cela affiche les inode de tout les fichiers et dossiers du répertoire courant
+   alias ll='ls -l'
+lorsque nous tapons ll maintenant cela affiche le detail de tout les fichiers et dossiers du répertoire courant
+   alias la='ls -a'
+lorsque nous tapons la maintenant cela affiche les fichiers cachés du répertoire courant
+
+2)nano .bashrc
+
+3)rajoute dans le fichier bash les commandes faites ci dessus avec le alias peut importe l'endroit rajoutez
+
+4)cd /home
+  df
+  df |grep home
+
+5)Touch fruits.txt
+nano fruits.txt
+copie le texte (CTRL  C)
+coller le texte (clique droit coller)
+enregistre (CTRL S)
+femrez (CTRL X)
+a)cut -d : -f 1 fruits.txt permet d'afficher uniquement le nom de fruits
+b)cut -d : -f 1,3 fruits.txt permet d'afficher les nom et les couleurs
+c)cut -d : -f 1,4,5 fruits.txt permet d'afficher le nom les prix et la provenan>
+
+6) Head -3 fruits.txt affiche les 3 premieres lignes du fichier fruits.txt
+   tail -2 fruits.txt affiche les 2 dernieres lignes du fichier fruits.txt
+   head -4 fruits.txt |tail -2 permet d'afficher les lignes 3 et 4
+
+7)cut -d : -f 4 passwd affiche les gid du fichier passwd
+
+8)
+
+9) 
+find . -iname ”*.txt” -exec wc -l {} \;
+
+Sert a trouve les fichier.txt de les exécuté, de compte leur mot et d’affiché tout les détails c’est a dire les droits la date de création etc …
+
+10)
+find ~ -iname ”*.txt” -exec echo cp {} Copie \;
+
+N’affiche rien lors de son exécution 
+
+11)
+find *.conf -exec nano {} \;
+
+12)
+Tar -c(copie)v(montre l’avance de la copie)f(nom du fichier) copie /home/ann1/gozzog
+Mais erreur car trop de fichier nom copiable donc erreur donc j’ai décidé de copie le dossier palaisy de mon espace personnel de la même façon.
+Gzip copie permet d’ensuite le compresse.
+
+13)
+Gzip -d copie permet de décompressé le fichier 
+Tar -x(extraire les fichier)vf copie pour extraire les fichier archivé
+
+14)
+echo ”Bonjour” affiche bonjour sur le terminal  
+echo ”Bonjour”> redirection/bonjour.out vas écrire bonjour dans le fichier bonjour.out en supprimant ce qu’il y avait dedans 
+echo ”Salut” > redirection/bonjour.out vas écrire salut dans le fichier bonjour.out en supprimant ce qu’il y avait dedans ici bonjour
+echo ”Bonjour” >> redirection/bonjour.out vas ajouter bonjour dans le fichier bonjour.out.
+
+15)
+Mkdir prog.c prog.o projet.c projet.o projet.out presentation
+
+a) Ls prog.c prog.o ou ls prog.*
+B)ls prog.c projet.c ou pro*.c
+C)ls projet.o projet.out ou ls projet.o*
+D)ls projet.c projet.o projet.out presentation* ou ls proj,pre
+E)ls pro*
+F)ls projet.?
+G)ls *e?e*
+H)ls scene 
+I)ls *t*t*
+
+16)
+message1=Bonjour 
+     echo $message1
+
+Message1 prend bonjour comme valeur 
+Echo permet d’afficher message 1 ici avec le $ca montre que c’est une variable 
+Donc ça affiche bonjour 
+
+message2=message1 
+echo $message2 
+Message 2 prend message 1 comme valeur 
+Echo permet d’afficher message 2 donc ici avec le $ ça montre que c’est une variable donc ça affiche message 2 
+unset message2
+Unset permet d’enlever ce qui était enregistré dans message 2 
+echo $message2
+Affiche message 2 mais message 2 ne comporte plus rien donc. Il affiche rien 
+
+message3=
+Enregistre rien dans message 3  echo $message3 
+
+Affiche message 3 mais message 3 ne comporte rien don c il n’affiche rien 
+
+message4 = Bonjour 
+Message 4 prend bonjour comme valeur 
+echo $message4 
+Affiche message 4 et donc ici affiche bonjour.
+bash
+Apelle le bash 
+echo $message1
+Affiche message 1 ici n’affiche rien parce qu’il n’y a rien d ‘enregistre dedans 
+
+17)
+varp=exemple
+Echo $varp
+
+Dans la 2e fenêtre le varp ne marche pas.
+
+Dans la 1er fenêtre le varp marche toujours.
+
+18)
+Read varx
+Coucou
+Echo $varx 
+varx=$varx$varx
+Echo $varx 
+
+19)
+Les variable montre les chemins vers lesquelles ont doit allez pour se trouver dedans 
+
+20)
+PATH=/opt/apache-maven-3.8.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+Montre les differents endroits ou s trouve le path séparé par des :.
+
+21)
+-rwxr-xr-x 1 gozzog ann1  35120 oct.  17 13:20 ./bin/monecho
+-rwxr-xr-x 1 gozzog ann1 138208 oct.  17 13:19 ./bin/monls
+Les droits sont les suivants 
+
+22)
+En exécutant ./bin/monls cela effectue la commande ls 
+Donc en renommant le dosser dans le /bin/ls /bin/monls la commande ls ne marchera plus il faudra effectué la commande monls.
+
+23)
+/home/ann1/gozzog/bin/monls
+A partir d’un autre dossier c’est cette commande qu’il faut tapé.
+
+24)
+La variable HOME permet de savoir quel chemin prendre afin d’arriver a ton répertoire personnel depuis la racine 
+
+La variante PATH permet de savoir quel chemin prendre afin de trouver les répertoire bin depuis la racine 
+
+La variable PS1 permet d’afficher ce qu’il est écrit juste avant le $ sur le terminal .
+
+Le PS2, Cette variable sert à définir à quoi ressemble votre invite lorsque vous commencez une session de shell
+
+
+
+26)
+Set | more permet d’afficher l’entierete des variables qu’elle soit global ou dynamique.
+Env permet d’afficher les variable global 
+
+
+27)
+La commande ps -f permet d’afficher les processus qui sont en marche sur la machine 
+
+Pour ouvrir gedit on effectue la commande gedit&
+Afin de l’utiliser on utilise la commande fg gedit 
+Et pour le quitter on peut utiliser la commande kill gedit (si la commande kill ne veut pas s’effectué effectué la commande kill -9).
+
+28)
+Nous ne voyons pas vraiment la différence entre les 2 lorsque nous le mettons en bg ou en fg mais les commandes sont les même 
+
+29)
+echo ’ls -l’ 
+Affiche juste ce qu’il y a dans les guillemets. 
+echo "je m’appelle $USER »
+Affiche je m’appelle et ce qu’il ya dans la variable USER ici gozzog.
+ls `ls` 
+Effectue la commande ls et affiche les dossier et fichier jusque’a la fin du de l’arborescence
+30)
+pwd | cut -d / -f 2,3  
+Permet d’afficher les 2 premières partie du chemin absolu du dossier ou vous êtes.
+Le terminal effectue Cut -d / -f 2,3 sur la commande pwd.
+
+31)
+echo(‘bonjour qui est tu’)
+utilisateur=Mathilde
+echo(‘Bonjour $utilisateur’)
+
+32)
+grep bla TEXTE.txt permet d’afficher les lignes contenant bla dans le fichier TEXTE.txt 
+
+33)
+grep 'ques\>' TEXTE.txt  permet d’afficher les lignes 
+
